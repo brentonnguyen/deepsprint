@@ -3,13 +3,11 @@
 /* User Objectives Section */
 
 .user-goals-container {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
   padding: var(--spacing-small);
   border: var(--border-outline);
   width: 70%;
   background-color: var(--main-container-color);
+  margin-top: 2em;
 }
 
 main ul {
@@ -18,8 +16,6 @@ main ul {
   flex-direction: column;
   align-items: center;
   list-style-type: none;
-  padding: 0;
-  margin: 0; /* Add this to remove default margin */
 }
 
 main li {
@@ -105,8 +101,13 @@ dialog {
   color: var(--white);
   border: var(--border-outline);
   padding: 2em;
-  width: 70%;
+  width: 100%;
+  height: 100%;
+  max-width: 80em;
+  max-height: 40em;
   margin: auto;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 dialog::backdrop {
@@ -119,15 +120,22 @@ dialog ul {
   background-color: var(--medium-gray);
   padding: 1em;
   margin: 1em 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 dialog li {
   text-decoration: none;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 dialog h3 {
   text-align: left;
   padding: var(--spacing-medium);
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 dialog label {
@@ -136,6 +144,8 @@ dialog label {
   gap: 0.5em;
   padding: 0.5em 0;
   text-align: left;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 dialog input[type="checkbox"] {

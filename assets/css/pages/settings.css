@@ -7,15 +7,33 @@
 
 fieldset {
     border: var(--border-outline);
-    border-radius: 0.6em;
+    border-radius: 0.3em;
     background-color: var(--main-container-color);
-    padding: 2em;
-}
+    padding: var(--spacing-large);
+    width: 50em;
+} 
 
 legend {
     font-weight: bold;
+    padding: var(--spacing-small);
 }
 
 label, input {
+    padding: var(--spacing-small);  
+} 
+
+button {
+    width: 10em;
     padding: var(--spacing-small);
+    margin: var(--spacing-small);
+    border: var(--border-outline);
+    background-color: var(--main-button-background-color);
+    color: var(--black);
+    cursor: pointer;
+    font-size: 1em;
+    text-align: center;
+}
+
+button:hover {
+    background-color: var(--main-hover-color);
 } 

@@ -5,40 +5,52 @@
 * 2. Other miscellaneous styles
 */  
 
-/* Grid Layout for the page */
+/* Layout for the page */
 .container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: repeat(5, auto) auto;
+    position: relative;
+    max-width: 75em;
+    margin: 0 auto;
+    padding: 2em;
 }
 
-.container p:nth-child(1) { grid-row: 1; grid-column: 1; } /* All of of the paragraphs are in first column */
-.container p:nth-child(2) { grid-row: 2; grid-column: 1; }
-.container p:nth-child(3) { grid-row: 3; grid-column: 1; }
-.container p:nth-child(4) { grid-row: 4; grid-column: 1; }
-.container p:nth-child(5) { grid-row: 5; grid-column: 1; }
-.container picture { grid-row: 1 / -1; grid-column: 2; } /* The picture is in the second column */
+.container p {
+    margin-bottom: 1.5em;
+    line-height: 1.6;
+    max-width: 60%;
+    padding-right: 40%;
+}
 
-picture {
-    width: 80%;
-    height: 80%;
+.container picture {
+    position: absolute;
+    right: 2em;
+    top: 0;
+    width: 35%;
+    max-width: 25em;
+}
+
+.container picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5em;
+    box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1);
 }
 
 /* Mobile Media Query */
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 48em) {
     .container {
-        display: block; /* Remove grid on mobile */
+        padding: 1em;
     }
     
     .container p {
-        grid-row: unset;    /* Reset grid positioning */
-        grid-column: unset;
-        margin-bottom: 1rem;
+        max-width: 100%;
+        padding-right: 0;
     }
     
-    picture {
-        max-width: 20rem;  /* Smaller on mobile */
-        margin: 1rem auto;
+    .container picture {
+        position: static;
+        width: 100%;
+        max-width: 18.75em;
+        margin: 2em auto;
         display: block;
     }
 }

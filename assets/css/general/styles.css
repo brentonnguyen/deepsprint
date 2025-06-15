@@ -143,7 +143,6 @@ main {
     display: flex;
     background-color: var(--main-background-color);
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     padding: var(--spacing-large);
     flex: 1;
