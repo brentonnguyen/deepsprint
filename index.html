@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <meta name="description" content="Landing Page for DeepSprint">
+    <meta name="author" content="Brenton Nguyen">
+    <link rel='icon' type='image/png' href='assets/images/favicon/favicon.ico'>
+    <link rel="stylesheet" href="assets/css/general/styles.css">
+    <link rel="stylesheet" href="assets/css/general/layout.css">
+    <link rel="stylesheet" href="assets/css/general/remedy.css">
+    <link rel="stylesheet" href="assets/css/pages/index.css">
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.7/dist/umd/supabase.min.js"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <a class="nav-logo" href="pages/home.html">deepsprint</a>
+        <ul class="nav-list">
+            <li><a href="pages/goals.html">Goals</a></li>
+            <li><a href="pages/about.html">About</a></li>
+            <li><a href="pages/settings.html">Settings</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>get sh*t done with deepsprint</h1>
+
+        <h2>a modern tool that only has the essentials.<br>
+        get more done with less time.</h2>
+
+        <button id="google-sign-in" class="auth-button">
+            <img src="https://www.google.com/favicon.ico" alt="Google Icon">
+            Sign in with Google
+        </button>
+        
+        <a href="pages/home.html">For project purposes, please click here to go to the home page.</a>
+
+        <section class="landing-features">
+            <article class="features">
+                <h3>Timer</h3>
+                <p>Minimal adjustable timer with incorporated breaks.</p>
+            </article>
+
+            <article class="features">
+                <h3>12 Week Year Goal Tracking System</h3>
+                <p>Plan your goals for the next 12 weeks, following closely to the popular
+                    12 week year framework.
+                </p>
+            </article>
+
+            <article class="features">
+                <h3>Analytics</h3>
+                <p>View personal analytics for reflection.</p>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="pages/legal/privacypolicy.html"> Privacy Policy </a></li>
+                <li><a href="pages/legal/tos.html"> Terms of Service </a></li>
+                <li><a href="pages/contact.html"> Contact </a></li>
+                <li><a href="pages/faq.html"> FAQ </a></li>
+                <li><a href="pages/pricing.html"> Pricing </a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2024 DeepSprint. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/auth.js"></script>
+</body>
+</html> 

@@ -1,0 +1,21 @@
+/* This is the CSS file for the Settings Page
+*
+* This file serves to:
+* 1. Style the settings page through radio buttons, other elements
+* 2. Other miscellaneous styles
+*/
+
+fieldset {
+    border: var(--border-outline);
+    border-radius: 0.6em;
+    background-color: var(--main-container-color);
+    padding: 2em;
+}
+
+legend {
+    font-weight: bold;
+}
+
+label, input {
+    padding: var(--spacing-small);
+} 

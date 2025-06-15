@@ -1,0 +1,260 @@
+/* This is the CSS file strictly for the layout of the header, footer, and navigation bar */
+
+/* Layout and Navigation Styles */
+
+:root {
+    /* Navigation Colors */
+    --nav-bg-color: var(--black);
+    --nav-text-color: var(--white);
+    --nav-hover-color: #bbbbbb;
+    
+    /* Spacing */
+    --nav-padding: 1rem 2rem;
+    --nav-gap: 1.5rem;
+    
+    /* Typography */
+    --nav-font-size: 1.5rem;
+    
+    /* Form Elements */
+    --border-outline: 0.1em solid rgb(51, 51, 51);
+}
+
+[data-theme="light"] {
+    /* Navigation Colors for Light Mode */
+    --nav-bg-color: #faf8f5;
+    --nav-text-color: #1a1a1a;
+    --nav-hover-color: #666666;
+    --nav-border-color: #e0e0e0;
+    
+    /* Main Layout */
+    --main-layout-color: var(--white); /* Header, Footer */
+    --main-background-color: var(--dark-gray);
+    --main-text-color: var(--black);
+    --main-header-color: var(--black);
+    --main-link-text-color: var(--white);
+
+    /* Form Elements */
+    --border-outline: 0.1em solid #c7b299;
+}
+
+[data-theme="dark"] { 
+    /* Navigation Colors */
+    --nav-bg-color: var(--black);
+    --nav-text-color: var(--white);
+    --nav-hover-color: #bbbbbb;
+    
+    /* Spacing */
+    --nav-padding: 1rem 2rem;
+    --nav-gap: 1.5rem;
+    
+    /* Typography */
+    --nav-font-size: 1.5rem;
+    
+    /* Form Elements */
+    --border-outline: 0.1em solid rgb(51, 51, 51);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        /* Navigation Colors for Light Mode */
+        --nav-bg-color: #faf8f5;
+        --nav-text-color: #1a1a1a;
+        --nav-hover-color: #666666;
+        --nav-border-color: #e0e0e0;
+        
+        /* Main Layout */
+        --main-layout-color: var(--white); /* Header, Footer */
+        --main-background-color: var(--dark-gray);
+        --main-text-color: var(--black);
+        --main-header-color: var(--black);
+        --main-link-text-color: var(--white);
+ 
+        /* Form Elements */
+        --border-outline: 0.1em solid #c7b299;
+    }
+}
+
+/* =============== LAYOUT STRUCTURE =============== */
+
+/* Shared grid layout for navigation and footer */
+.nav-bar, footer {
+    display: grid;
+    grid-column: 1 / -1;
+    background-color: var(--nav-bg-color);
+}
+
+/* =============== NAVIGATION BAR =============== */
+
+.nav-bar {
+    grid-template-columns: auto 1fr;  /* Logo and nav links */
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--nav-padding);
+    border-bottom: var(--border-outline);
+}
+
+/* Navigation list container */
+.nav-list {
+    display: flex;
+    justify-content: end;
+    gap: var(--nav-gap);
+    list-style: none;
+}
+
+/* Navigation links styling */
+.nav-list a, 
+.nav-logo {
+    text-decoration: none;
+    font-size: var(--nav-font-size);
+    font-weight: bold;
+    color: var(--nav-text-color);
+}
+
+.nav-list a {
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: var(--nav-hover-color);
+}
+
+/* =============== FOOTER =============== */
+
+footer {
+    padding: var(--nav-padding);
+    justify-content: space-between;
+    border-top: var(--border-outline);
+}
+
+footer nav ul {
+    display: flex;
+    gap: var(--nav-gap);
+    list-style: none;
+}
+
+footer nav a {
+    text-decoration: none;
+    color: var(--nav-text-color);
+}
+
+/* =============== MEDIA QUERIES =============== */
+
+/* Desktop styles */
+@media screen and (min-width: 75em) {
+    .nav-bar {
+        padding: 1.5rem 3rem;
+    }
+    
+    .nav-list {
+        gap: 2rem;
+    }
+    
+    .nav-list a, .nav-logo {
+        font-size: 1.8rem;
+    }
+    
+    footer {
+        padding: 1.5rem 3rem;
+    }
+    
+    footer nav ul {
+        gap: 2rem;
+    }
+    
+    footer nav a {
+        font-size: 1.1rem;
+    }
+}
+
+/* Tablet styles */
+@media screen and (max-width: 60.5em) {
+    .nav-bar {
+        padding: 1rem 1.5rem;
+    }
+    
+    .nav-list {
+        gap: 1rem;
+    }
+    
+    .nav-list a, .nav-logo {
+        font-size: 1.3rem;
+    }
+    
+    footer {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+    
+    footer nav ul {
+        flex-direction: row;
+        justify-content: left;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+    
+    footer nav a {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+    
+    footer p {
+        font-size: 0.9rem;
+        margin: 0;
+    }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 48rem) {
+    .nav-bar {
+        grid-template-columns: 1fr 1fr; 
+        justify-items: center;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .nav-list {
+        display: flex;             
+        flex-direction: row;    
+        justify-content: space-between;
+        gap: 0.5rem;
+    }
+
+    .nav-list a {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .nav-logo {
+        font-size: 1.2rem;
+        margin-right: 10em;
+    }
+    
+    footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+    
+    footer nav ul {
+        flex-direction: column;
+        justify-content: left;
+        align-items: left;
+        gap: 1rem;
+    }
+    
+    footer nav a {
+        font-size: 0.9rem;
+        display: flex;
+        padding: 0.5rem;
+    }
+    
+    footer p {
+        font-size: 0.8rem;
+        white-space: normal;
+    }
+}

@@ -1,0 +1,215 @@
+/* This is the CSS file for the Select Page
+*
+* This file serves to:
+* 1. Style the select page through dropdown menus
+* 2. Other miscellaneous styles
+*/
+
+/* Drop Down Menu */
+
+/* Label styling */
+label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Select dropdown styling */
+select {
+    display: flex;
+    margin: 0 auto; /* centers the dropdown in the middle of the page */
+    justify-content: center;
+    align-items: center;
+    border: .1em solid var(--main-container-border-color);
+    border-radius: 0.2em;
+    background-color: var(--main-button-background-color);
+    cursor: pointer;
+    padding: var(--spacing-small);
+    width: 60em;
+    box-sizing: border-box;
+    height: 2.8em;
+    line-height: 1;
+    font-size: var(--font-size-small);
+}
+
+select:hover {
+    background-color: #d1d1d1;
+}
+
+select option {
+    background-color: #e4e4e4;
+    padding: var(--spacing-small);
+    width: 60em;
+}
+
+/* Button styling */
+button {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 20em;
+    height: 2.8em;
+    border: .1em solid var(--main-button-border-color);
+    border-radius: 0.3em;
+    padding: var(--spacing-small);
+    margin-top: var(--spacing-large);
+    font-size: var(--font-size-small);
+}
+
+button:hover {
+    background-color: var(--main-hover-color);
+}
+
+/* Media Queries */
+
+
+/* Extra small mobile styles (up to 25em / 400px) */
+@media screen and (max-width: 25em) {
+    form {
+        padding: 0 1em;
+    }
+
+    main h3 {
+        font-size: 0.9em;
+        max-width: 35ch;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    
+    label {
+        font-size: 0.7em;
+        margin: 4em auto 1em auto;
+        padding: 0 0.5em;
+    }
+    
+    select {
+        max-width: 100%;
+        font-size: 0.8em;
+        height: 3em;
+    }
+    
+    select option {
+        font-size: 0.8em;
+    }
+    
+    button {
+        width: 100%;
+        max-width: 100%;
+        height: 3em;
+        margin-top: 1.5em;
+        font-size: 0.8em;
+    }
+}
+
+/* Mobile styles (25.01em to 48em / 401px to 768px) */
+@media screen and (min-width: 25.01em) and (max-width: 48em) {
+    form {
+        padding: 0 1.5em;
+    }
+
+    main h3 {
+        font-size: 1em;
+        max-width: 40ch;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    
+    label {
+        margin-top: 5em;
+        font-size: 0.8em;
+        margin-bottom: 1em;
+    }
+    
+    select {
+        max-width: 100%;
+        font-size: var(--font-size-small);
+        height: 2.6em;
+    }
+    
+    select option {
+        font-size: var(--font-size-small);
+    }
+    
+    button {
+        max-width: 100%;
+        height: 3em;
+        margin-top: 1.5em;
+        font-size: 0.8em;    
+    }
+}
+
+/* Small tablet styles (48.01em to 64em / 769px to 1024px) */
+@media screen and (min-width: 48.01em) and (max-width: 64em) {
+    form {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    main h3 {
+        font-size: 1.2em;
+    }
+    
+    label {
+        font-size: 0.9em;
+        margin: 2em auto 1em auto;
+    }
+    
+    select {
+        max-width: 100%;
+    }
+    
+    select option {
+        font-size: 0.8em;
+    }
+    
+    button {
+        max-width: 100%;
+        height: 3em;
+        margin-top: 1.5em;
+        font-size: 0.8em;    
+    }
+}
+
+/* Large tablet styles (64.01em to 75em / 1025px to 1200px) */
+@media screen and (min-width: 64.01em) and (max-width: 75em) {
+    form {
+        padding: 0 2em;
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    main h3 {
+        font-size: 1.4em;
+        max-width: 55ch;
+        text-align: center;
+        margin: 2em auto;
+    }
+    
+    label {
+        font-size: 1em;
+        margin: 2.5em auto 1.2em auto;
+        padding: 0 0.8em;
+    }
+    
+    select {
+        max-width: 100%;
+        font-size: 0.9em;
+        height: 2.8em;
+    }
+    
+    select option {
+        font-size: 0.85em;
+    }
+    
+    button {
+        width: 20em;
+        height: 2.8em;
+        margin-top: 2em;
+        font-size: 0.9em;
+        padding: 0.6em;
+    }
+}
+

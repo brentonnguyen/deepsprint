@@ -1,0 +1,77 @@
+    /* This is the CSS file for the Home Page
+    *
+    * This file serves to:
+    * 1. Style the home page through buttons, other elements
+    * 2. Other miscellaneous styles
+    */
+
+/* Button styles */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+main h2 {
+    width: 100%;
+    opacity: 0.8;
+}
+
+.action-buttons a {
+    text-align: center;
+    background-color: var(--main-button-background-color);
+    font-size: var(--font-size-small);
+    width: 20em;
+    text-decoration: none;
+    border: .1em solid var(--main-button-border-color);
+    border-radius: 0.3em;
+    padding: var(--spacing-small);
+    color: var(--main-container-background-color);
+}
+
+.action-buttons a:hover {
+    background-color: var(--main-hover-color);
+}
+
+mark {
+    background-color: rgb(255, 242, 175);
+    padding: .2em;
+}
+
+/* Media Queries */
+
+/* Extra small mobile styles (25em and below) */
+@media screen and (max-width: 25em) {
+    .action-buttons {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .action-buttons a {
+        width: 18em;
+    }
+}
+
+/* Mobile styles (25.01em to 48em) */
+@media screen and (min-width: 25.01em) and (max-width: 48em) {
+    .action-buttons {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .action-buttons a {
+        width: 20em;
+    }
+}
+
+/* Tablet styles (48.01em to 64em) */
+@media screen and (min-width: 48.01em) and (max-width: 64em) {
+    .action-buttons {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+    
+    .action-buttons a {
+        width: 18em;
+    }
+}

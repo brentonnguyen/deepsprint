@@ -1,0 +1,44 @@
+/* This is the CSS file for the About Page
+*
+* This file serves to:
+* 1. Style the about page through text, other elements
+* 2. Other miscellaneous styles
+*/  
+
+/* Grid Layout for the page */
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(5, auto) auto;
+}
+
+.container p:nth-child(1) { grid-row: 1; grid-column: 1; } /* All of of the paragraphs are in first column */
+.container p:nth-child(2) { grid-row: 2; grid-column: 1; }
+.container p:nth-child(3) { grid-row: 3; grid-column: 1; }
+.container p:nth-child(4) { grid-row: 4; grid-column: 1; }
+.container p:nth-child(5) { grid-row: 5; grid-column: 1; }
+.container picture { grid-row: 1 / -1; grid-column: 2; } /* The picture is in the second column */
+
+picture {
+    width: 80%;
+    height: 80%;
+}
+
+/* Mobile Media Query */
+@media screen and (max-width: 48rem) {
+    .container {
+        display: block; /* Remove grid on mobile */
+    }
+    
+    .container p {
+        grid-row: unset;    /* Reset grid positioning */
+        grid-column: unset;
+        margin-bottom: 1rem;
+    }
+    
+    picture {
+        max-width: 20rem;  /* Smaller on mobile */
+        margin: 1rem auto;
+        display: block;
+    }
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deepsprint</title>
+    <meta name="description" content="Create and adjust goals to work towards something">
+    <meta name="author" content="Brenton Nguyen">
+    <link rel='icon' type='image/png' href='../assets/images/favicon/favicon.ico'>
+    <link rel="stylesheet" href="../assets/css/general/styles.css">
+    <link rel="stylesheet" href="../assets/css/general/layout.css">
+    <link rel="stylesheet" href="../assets/css/general/remedy.css">
+    <link rel="stylesheet" href="../assets/css/pages/goals.css">
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.7/dist/umd/supabase.min.js"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <a class="nav-logo" href="home.html">deepsprint</a>
+        <ul class="nav-list">
+            <li><a href="goals.html">Goals</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="settings/settings.html">Settings</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1> Your Current Goals </h1>
+        <section class="user-goals-container">
+            <ul>
+                <li>
+                    <details>
+                        <summary>Example Goal 1</summary>
+                        
+                        <article>
+                            <section class="quarter">
+                                <h3>Quarter 1: </h3>
+                                <ol class="weeks">
+                                    <li>
+                                        <h3>Week 1:</h3>
+                                        <p>week goal description</p>
+                                    </li>
+                                    <li>
+                                        <h3>Week 2:</h3>
+                                        <p>week goal description</p>
+                                    </li>
+                                    <li>
+                                        <h3>Week 3:</h3>
+                                        <p>week goal description</p>
+                                    </li>
+                                </ol>
+                            </section>
+
+                            <section class="quarter">
+                                <h3>Quarter 2: </h3>
+                                <ol class="weeks">
+                                    <li>
+                                        <h3>Week 4:</h3>
+                                        <p>week goal description</p>
+                                    </li>
+                                    <li>
+                                        <h3>Week 5:</h3>
+                                        <p>week goal description</p>
+                                    </li>
+                                    <li>
+                                        <h3>Week 6:</h3>
+                                        <p>week goal description</p>
+                                    </li>
+                                </ol>
+                            </section>
+
+                            <section class="quarter">
+                                <h3>Quarter 3: </h3>
+                                <ol class="weeks">
+                                    <li>
+                                        <h3>Week 7:</h3>
+                                        <p>week goal description</p>
+                                    </li>
+                                    <li>
+                                        <h3>Week 8:</h3>
+                                        <p>week goal description</p>
+                                    </li>
+                                    <li>
+                                        <h3>Week 9:</h3>
+                                        <p>week goal description</p>
+                                    </li>
+                                </ol>
+                            </section>
+
+                            <section class="quarter">
+                                <h3>Quarter 4: </h3>
+                                <ol class="weeks">
+                                    <li>
+                                        <h3>Week 10:</h3>
+                                        <p>week goal description</p>
+                                    </li>
+                                    <li>
+                                        <h3>Week 11:</h3>
+                                        <p>week goal description</p>
+                                    </li>
+                                    <li>
+                                        <h3>Week 12:</h3>
+                                        <p>week goal description</p>
+                                    </li>
+                                </ol>
+                            </section>
+                        </article>
+                    </details>
+                </li>
+            </ul>    
+        </section>
+
+        <!-- Single modal for all weeks -->
+        <dialog id="week-view">
+            <h2>Week Details</h2>
+            <h3>Tasks Overview</h3>
+            <ul>
+                <li>
+                    <label>
+                        <input type="checkbox">
+                        Task 1
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox">
+                        Task 2
+                    </label>
+                </li>
+            </ul>
+            <button id="close-week-view">Close</button>
+            <button>Add Tasks</button>
+            <button>Remove Tasks</button>
+        </dialog>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="legal/privacypolicy.html"> Privacy Policy </a></li>
+                <li><a href="legal/tos.html"> Terms of Service </a></li>
+                <li><a href="contact.html"> Contact </a></li>
+                <li><a href="faq.html"> FAQ </a></li>
+                <li><a href="pricing.html"> Pricing </a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2024 DeepSprint. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/pages/goals.js"></script>
+</body>
+</html> 

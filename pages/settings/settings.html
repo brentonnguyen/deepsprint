@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deepsprint</title>
+    <meta name="description" content="Settings page for DeepSprint to optimize website to the users preference">
+    <meta name="author" content="Brenton Nguyen">
+    <link rel='icon' type='image/png' href='../../assets/images/favicon/favicon.ico'>
+    <link rel="stylesheet" href="css/general/styles.css">
+    <link rel="stylesheet" href="css/general/layout.css">
+    <link rel="stylesheet" href="css/general/remedy.css">
+    <link rel="stylesheet" href="css/pages/settings.css">
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.7/dist/umd/supabase.min.js"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <a class="nav-logo" href="home.html">deepsprint</a>
+        <ul class="nav-list">
+            <li><a href="goals.html">Goals</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Settings</h1>
+
+        <h2> Adjust your preferences below </h2>
+
+        <fieldset>
+            <legend> Website Appearance </legend>
+
+            <input type="radio" name="website-appearance" id="dark-mode" value="dark-mode"
+            checked="checked">
+            <label for="dark-mode">Dark Mode (Default)</label>
+
+            <input type="radio" name="website-appearance" id="light-mode" value="light-mode">
+            <label for="light-mode">Light Mode</label>
+        </fieldset>
+
+        <fieldset>
+            <legend> Time Zone </legend>
+
+            <input type="radio" name="timezone" id="local-device-timezone"
+            value="local-device-timezone" checked="checked">
+            <label for="local-device-timezone">Local Time-Zone (Device Default)</label>
+
+            <input type="radio" name="timezone" id="america-los-angeles"
+            value="america/los_angeles">
+            <label for="america-los-angeles">PST (Los Angeles)</label>
+
+            <input type="radio" name="timezone" id="america-new-york"
+            value="america/new_york">
+            <label for="america-new-york">EST (New York)</label>
+
+            <input type="radio" name="timezone" id="europe-london"
+            value="europe/london">
+            <label for="europe-london">GMT (London)</label>
+        </fieldset>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="privacypolicy.html"> Privacy Policy </a></li>
+                <li><a href="tos.html"> Terms of Service </a></li>
+                <li><a href="contact.html"> Contact </a></li>
+                <li><a href="faq.html"> FAQ </a></li>
+                <li><a href="pricing.html"> Pricing </a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2024 DeepSprint. All rights reserved.</p>
+    </footer>
+</body>
+</html> 

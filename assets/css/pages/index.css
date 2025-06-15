@@ -1,0 +1,127 @@
+/* This is the CSS file for the Index / landing Page
+*   
+* This file serves to:
+* 1. Style the landing page through buttons, other elements
+* 2. Other miscellaneous styles
+*/
+
+main h2 {
+    line-height: 1.5;
+    opacity: 0.7;
+}
+
+/* Authentication */
+.auth-button {
+    align-items: center;
+    justify-content: center;
+    margin: 4em auto;
+    padding: 1em 5em;
+    border-radius: 0.3em;
+    background: var(--main-button-background-color);
+    box-shadow: 0 0.25em 1.25em rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    gap: 0.5em;
+}
+
+.auth-button:hover {
+    background: var(--main-hover-color);
+}
+
+.auth-button img {
+    width: 1.25em;
+    height: 1.25em;
+}
+
+main a {
+    display: flex;
+    justify-content: center;
+    margin: 2em auto;
+    opacity: 0.7;
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+    color: var(--white)
+}
+
+/* Landing Page Features */
+.landing-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17.5em, 1fr));
+    gap: 2em;
+    margin-top: 4em;
+}
+
+.features {
+    background: var(--main-container-color);
+    border: 0.1em solid var(--main-container-border-color);
+    border-radius: 0.75em;
+    padding: 2em;
+    transition: all 0.3s ease;
+}
+
+.features:hover {
+    background-color: var(--dark-gray);
+}
+
+.features h3 {
+    font-size: 1.25em;
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+
+/* Mobile Devices (480px and below) */
+@media screen and (max-width: 48em) {
+    /* Make auth button stack better on mobile */
+    .auth-button {
+        margin: 2em auto; /* Reduce top/bottom margin */
+        padding: 1em 2em; /* Less horizontal padding */
+        width: 80%; /* Set max width */
+        max-width: 20em;
+    }
+    
+    /* Single column grid on mobile */
+    .landing-features {
+        grid-template-columns: 1fr; /* Single column */
+        gap: 1.5em; /* Reduce gap */
+        margin-top: 5em; /* Reduce top margin */
+        margin-bottom: 5em;
+    }
+    
+    /* Adjust feature cards */
+    .features {
+        padding: 1em; /* Less padding on mobile */
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .features h3 {
+        font-size: 1.1em; /* Slightly smaller */
+    }
+}
+
+/* Tablet Media Query */
+@media screen and (max-width: 60.5em) {
+    main h2 {
+        max-width: 40ch;
+        margin: 0 auto 2.5em;
+    }
+    
+    .auth-button {
+        margin: 3em auto;
+        padding: 0.9em 4em;
+    }
+    
+    .landing-features {
+        grid-template-columns: repeat(auto-fit, minmax(30em, 1fr)); /* Increase minmax */
+        gap: 1.8em;
+        margin-top: 3.5em;
+    }
+    
+    .features {
+        padding: 1.8em;
+    }
+    
+    .features h3 {
+        font-size: 1.2em;
+        margin-bottom: 0.9em;
+    }
+ }

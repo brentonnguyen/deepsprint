@@ -1,0 +1,538 @@
+/* CSS Page for the Goals Page */
+
+/* User Objectives Section */
+
+.user-goals-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: var(--spacing-small);
+  border: var(--border-outline);
+  width: 70%;
+  background-color: var(--main-container-color);
+}
+
+main ul {
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Add this to remove default margin */
+}
+
+main li {
+  width: 100%; /* Make the li take full width of its container */
+  padding: var(--spacing-small);
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+  list-style-type: none;
+}
+
+main summary {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%; 
+  display: list-item;
+  color: var(--main-text-color);
+}
+
+li:hover {
+  color: var(--main-hover-color);
+}
+
+/* 12 Week Year System Goal View */
+
+article {
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  background-color: var(--main-container-color);
+  border: none;
+}
+
+.quarter {
+  padding: var(--spacing-large);
+}
+
+.quarter h3 {
+  text-align: left;
+  font-size: var(--font-size-medium);
+  text-decoration-style: none;
+}
+
+.weeks {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+}
+
+.weeks li {
+  flex: 1;
+  border: var(--border-outline);
+  background-color: var(--dark-gray);
+  text-align: left;
+  margin: 0 1em;
+  padding: 2em 1em;
+}
+
+.weeks li::hover {  
+  background-color: var(--main-hover-color);
+}
+
+.weeks li h3 {
+  font-size: var(--font-size-small);
+  margin: 0;
+  padding-left: 0;
+}
+
+.weeks li p {
+  text-align: left;
+  opacity: 0.9;
+  padding-left: 0;
+  margin: 0.5em 0 0 0;
+}
+
+/* Week View Dialog */
+dialog {
+  background: var(--dark-gray);
+  color: var(--white);
+  border: var(--border-outline);
+  padding: 2em;
+  width: 70%;
+  margin: auto;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+dialog ul {
+  list-style: none;
+  border: var(--border-outline);
+  background-color: var(--medium-gray);
+  padding: 1em;
+  margin: 1em 0;
+}
+
+dialog li {
+  text-decoration: none;
+}
+
+dialog h3 {
+  text-align: left;
+  padding: var(--spacing-medium);
+}
+
+dialog label {
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+  padding: 0.5em 0;
+  text-align: left;
+}
+
+dialog input[type="checkbox"] {
+  appearance: none;
+  border-radius: 0.3em;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: var(--light-gray);
+  cursor: pointer;
+}
+
+dialog input[type="checkbox"]:checked {
+  background-color: lightgreen;
+}
+
+dialog button {
+  padding: var(--spacing-small);
+  margin: var(--spacing-small);
+  border: var(--border-outline);
+  background-color: var(--main-button-background-color);
+  color: var(--black);
+  cursor: pointer;
+}
+
+dialog button:hover {
+  background-color: var(--main-hover-color);
+}
+
+#close-week-view {
+  float: right;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 25em) {
+  
+  .user-goals-container {
+    flex-direction: column;
+    margin: 0 auto;
+    padding: var(--spacing-small);
+    width: 70%;
+  }
+  
+  main ul {
+    width: 70%; 
+    display: flex;
+    flex-direction: column;
+   
+  }
+  
+  main li {
+    width: 70%; /* Make the li take full width of its container */
+    padding: var(--spacing-small);
+    text-align: center;
+  }
+  
+  main summary {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%; 
+    display: list-item;
+  }
+  
+  li:hover {
+  }
+  
+  article {
+    display: block;
+  }
+  
+  .quarter {
+    padding: var(--spacing-small);
+  }
+  
+  .quarter h3 {
+    text-align: left;
+    font-size: var(--font-size-small);
+  }
+  
+  .weeks {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+  
+  .weeks li {
+    flex: 1;
+    border: var(--border-outline);
+    text-align: left;
+    margin: 0 1em;
+    padding: 2em 1em;
+  }
+  
+  .weeks li:hover {
+  }
+  
+  .weeks li h3 {
+    font-size: var(--font-size-small);
+    margin: 0;
+    padding-left: 0;
+  }
+  
+  .weeks li p {
+    text-align: left;
+    padding-left: 0;
+    margin: 0.5em 0 0 0;
+  }
+
+  dialog {
+    width: 70%;
+  }
+  
+  
+  dialog ul {
+    border: var(--border-outline);
+    padding: .3em;
+  }
+  
+  dialog li {
+    
+  }
+  
+  dialog h3 {
+    text-align: center;
+    padding: var(--spacing-small);
+  }
+  
+  dialog label {
+    display: block;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+    padding: 0.5em 0;
+    text-align: left;
+  }
+  
+  dialog input[type="checkbox"] {
+    border-radius: 0.3em;
+    width: var(--spacing-small);
+    height: var(--spacing-small);
+  }
+  
+  dialog input[type="checkbox"]:checked {
+  }
+  
+  dialog button {
+    padding: 0.1em;
+    margin: 0.1em;
+  }
+  
+  dialog button:hover {
+  }
+  
+  #close-week-view {
+    float: right;
+  }
+
+}
+
+/* Extra small mobile styles (25em and below) */
+@media screen and (max-width: 25em) {
+  .user-goals-container {
+    width: 90%;
+    padding: var(--spacing-small);
+  }
+  
+  main ul {
+    width: 100%;
+  }
+  
+  main li {
+    width: 100%;
+    padding: var(--spacing-small);
+    text-align: center;
+  }
+  
+  article {
+    display: block;
+  }
+  
+  .quarter {
+    padding: var(--spacing-small);
+  }
+  
+  .quarter h3 {
+    text-align: left;
+    font-size: var(--font-size-small);
+  }
+  
+  .weeks {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .weeks li {
+    flex: none;
+    margin: 0;
+    padding: 1rem 0.5rem;
+    min-height: 4rem;
+  }
+  
+  .weeks li h3 {
+    font-size: var(--font-size-small);
+  }
+  
+  .weeks li p {
+    text-align: left;
+    padding-left: 0;
+    margin: 0.5em 0 0 0;
+  }
+
+  dialog {
+    width: 95%;
+    padding: 1rem;
+  }
+  
+  dialog ul {
+    padding: 0.5rem;
+  }
+  
+  dialog h3 {
+    text-align: center;
+    padding: var(--spacing-small);
+  }
+  
+  dialog label {
+    display: block;
+    padding: 0.3rem 0;
+  }
+  
+  dialog input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  dialog button {
+    padding: 0.5rem;
+    margin: 0.3rem;
+  }
+}
+
+/* Mobile styles (25.01em to 48em) */
+@media screen and (min-width: 25.01em) and (max-width: 48em) {
+  .user-goals-container {
+    width: 90%;
+    padding: var(--spacing-small);
+  }
+  
+  main ul {
+    width: 100%;
+  }
+  
+  main li {
+    width: 100%;
+    padding: var(--spacing-small);
+  }
+  
+  .weeks {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .weeks li {
+    flex: none;
+    margin: 0;
+    padding: 1.5rem 1rem;
+    min-height: 6rem;
+  }
+  
+  .quarter {
+    padding: var(--spacing-small);
+  }
+  
+  .quarter h3 {
+    font-size: var(--font-size-small);
+  }
+  
+  .weeks li h3 {
+    font-size: var(--font-size-small);
+  }
+
+  dialog {
+    width: 90%;
+    padding: 1.5rem;
+  }
+  
+  dialog ul {
+    padding: 1rem;
+  }
+  
+  dialog h3 {
+    text-align: center;
+    padding: var(--spacing-small);
+  }
+  
+  dialog label {
+    display: grid;
+    grid-template-columns: 1.5rem auto;
+    gap: 0.5rem;
+  }
+  
+  dialog input[type="checkbox"] {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  dialog button {
+    padding: var(--spacing-small);
+    margin: var(--spacing-small);
+  }
+}
+
+/* Tablet styles (48.01em to 64em) */
+@media screen and (min-width: 48.01em) and (max-width: 64em) {
+  .user-goals-container {
+    width: 80%;
+    padding: var(--spacing-medium);
+  }
+  
+  main ul {
+    width: 100%;
+  }
+  
+  main li {
+    width: 100%;
+    padding: var(--spacing-medium);
+  }
+
+  article {
+    display: grid;
+  }
+  
+  .quarter {
+    padding: var(--spacing-medium);
+  }
+  
+  .quarter h3 {
+    text-align: left;
+    font-size: var(--font-size-medium);
+  }
+  
+  /* Display weeks in 2x2 grid on tablet */
+  .weeks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 0;
+  }
+  
+  .weeks li {
+    flex: none;
+    margin: 0;
+    padding: 1.5rem 1rem;
+    min-height: 8rem;
+  }
+  
+  .weeks li h3 {
+    font-size: var(--font-size-small);
+  }
+  
+  .weeks li p {
+    text-align: left;
+    padding-left: 0;
+    margin: 0.5em 0 0 0;
+  }
+
+  dialog {
+    width: 80%;
+    padding: 2rem;
+  }
+  
+  dialog ul {
+    padding: 1.5rem;
+  }
+  
+  dialog h3 {
+    text-align: left;
+    padding: var(--spacing-medium);
+  }
+  
+  dialog label {
+    display: grid;
+    grid-template-columns: 1.5rem auto;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+  }
+  
+  dialog input[type="checkbox"] {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  dialog button {
+    padding: var(--spacing-small);
+    margin: var(--spacing-small);
+  }
+}

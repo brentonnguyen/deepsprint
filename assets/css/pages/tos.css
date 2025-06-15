@@ -1,0 +1,30 @@
+/* This is the CSS file for the Terms of Service Page
+*
+* This file serves to:
+* 1. Style the terms of service page
+* 2. Other miscellaneous styles
+*/  
+
+
+main p {
+    text-align: left; /* Left-align for better readability */
+
+}
+
+main ul {
+    max-width: var(--text-width);
+    margin: var(--spacing-medium) auto;
+    padding: var(--spacing-small) var(--spacing-medium);
+    text-align: left; /* Left-align for better readability */
+    list-style-position: outside;
+    padding-left: 2em;
+}
+
+main li {
+    max-width: var(--text-width);
+    margin: var(--spacing-medium) auto;
+    padding: var(--spacing-small) var(--spacing-medium);
+    text-align: left; /* Left-align for better readability */
+    list-style-position: outside;
+    padding-left: 2em;
+}

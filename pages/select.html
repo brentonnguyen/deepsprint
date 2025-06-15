@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deepsprint</title>
+    <meta name="description" content="Create and manage deepwork sessions">
+    <meta name="author" content="Brenton Nguyen">
+    <link rel='icon' type='image/png' href='../assets/images/favicon/favicon.ico'>
+    <link rel="stylesheet" href="css/general/styles.css">
+    <link rel="stylesheet" href="css/general/layout.css">
+    <link rel="stylesheet" href="css/general/remedy.css">
+    <link rel="stylesheet" href="css/pages/select.css">
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.7/dist/umd/supabase.min.js"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <a class="nav-logo" href="home.html">deepsprint</a>
+        <ul class="nav-list">
+            <li><a href="goals.html">Goals</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1> Focus Session </h1>
+
+        <h2> Before starting a session, select a clear objective you want to
+            achieve in this focus session.
+        </h2>
+
+        <h3> Sessions are more productive and efficient if you focus on one
+            clear task at hand.
+        </h3>
+
+        <form action="session.html" method="get">
+            <label for="objectives-select">Select an objective from the dropdown below:</label>
+            <select id="objectives-select" name="user-objectives" required>
+                <option value="" disabled selected>e.g., Complete project proposal, Review documentation...</option>
+                <option value="objective-1">Example Objective 1</option>
+                <option value="objective-2">Example Objective 2</option>
+                <option value="objective-3">Example Objective 3</option>
+            </select>
+
+            <button type="submit">Start a Focus Session</button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="privacypolicy.html"> Privacy Policy </a></li>
+                <li><a href="tos.html"> Terms of Service </a></li>
+                <li><a href="contact.html"> Contact </a></li>
+                <li><a href="faq.html"> FAQ </a></li>
+                <li><a href="pricing.html"> Pricing </a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2024 DeepSprint. All rights reserved.</p>
+    </footer>
+</body>
+</html> 

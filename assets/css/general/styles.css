@@ -1,0 +1,352 @@
+/* This is the main CSS file for DeepSprint
+*
+* This file serves to:
+* 1. Import all CSS files
+* 2. Set universal theme styles across the site (color, font, etc.)
+* 3. etc. 
+*/
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "HelveticaNeue-bold", "Helvetica Neue Light", "Helvetica Neue", 
+                 Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+/* Theme Variables */
+:root {
+    /* Base Colors */
+    --black: black;
+    --white: white;
+    --dark-gray: #121212;
+    --medium-gray: #1a1a1a;
+    --light-gray: #e4e4e4;
+    --hover-gray: #D3D3D3;
+    
+
+    /* Main Layout */
+    --main-layout-color: var(--black); /* Header, Footer */
+    --main-background-color: var(--dark-gray);
+    --main-text-color: var(--white);
+    --main-header-color: var(--white);
+    --main-link-text-color: var(--black);
+
+    /* Container Elements */
+    --main-container-color: rgb(26, 26, 26);
+    --main-container-border-color: #fff;
+    --main-hover-color: var(--hover-gray);
+
+    /* Button Elements */
+    --main-button-background-color: var(--light-gray);
+    --main-button-border-color: var(--black);
+
+    /* Spacing */
+    --spacing-small: 0.5em;
+    --spacing-medium: 1em;
+    --spacing-large: 2em;
+    
+    /* Typography */
+    --font-size-large: 3rem;
+    --font-size-medium: 2rem;
+    --font-size-small: 1rem;
+
+    --header-width: 40ch;
+    --text-width: 65ch;
+
+    /* Form Elements */
+    --border-outline: 0.1em solid rgb(51, 51, 51);
+}
+  
+  [data-theme="light"] {
+    /* Main Layout */
+    --main-layout-color: var(--white); /* Header, Footer */
+    --main-background-color: var(--white);
+    --main-text-color: var(--black);
+    --main-header-color: var(--black);
+    --main-link-text-color: var(--white);
+  
+    /* Container Elements */
+    --main-container-color: var(--light-gray);
+    --main-container-border-color: var(--black);
+    --main-hover-color: #b0b0b0;
+  
+    /* Button Elements */
+    --main-button-background-color: var(--black);
+    --main-button-border-color: var(--white);
+  
+    /* Form Elements */
+    --border-outline: 0.1em solid rgb(200, 200, 200);
+  }
+  
+  [data-theme="dark"] {
+    /* Main Layout */
+    --main-layout-color: var(--black); /* Header, Footer */
+    --main-background-color: var(--dark-gray);
+    --main-text-color: var(--white);
+    --main-header-color: var(--white);
+    --main-link-text-color: var(--black);
+  
+    /* Container Elements */
+    --main-container-color: var(--medium-gray);
+    --main-container-border-color: var(--white);
+    --main-hover-color: var(--hover-gray);
+  
+    /* Button Elements */
+    --main-button-background-color: var(--light-gray);
+    --main-button-border-color: var(--black);
+  
+    /* Form Elements */
+    --border-outline: 0.1em solid rgb(51, 51, 51);
+  }
+  
+  @media (prefers-color-scheme: light) {
+    :root {
+        /* Base Colors */
+        --black: #1a1a1a;
+        --white: #ffffff;
+        --dark-gray: #faf8f5;
+        --medium-gray: #ffffff;
+        --light-gray: #E2CDBB;
+        --hover-gray: #CDB49F;
+        
+        /* Main Layout */
+        --main-layout-color: var(--white); /* Header, Footer */
+        --main-background-color: var(--dark-gray);
+        --main-text-color: var(--black);
+        --main-header-color: var(--black);
+        --main-link-text-color: var(--white);
+ 
+        /* Container Elements */
+        --main-container-color: #ffffff;
+        --main-container-border-color: #e8e3db;
+        --main-hover-color: var(--hover-gray);
+ 
+        /* Button Elements */
+        --main-button-background-color: var(--light-gray);
+        --main-button-border-color: var(--black);
+ 
+        /* Form Elements */
+        --border-outline: 0.1em solid #d4cfc7;
+    }
+}
+  
+/* Main Layout Elements */
+body {
+    display: grid;
+    background-color: var(--main-background-color);
+    grid-template-rows: auto 1fr auto; /* nav, main, footer */
+    min-height: 100vh; /* Ensures the body takes up at least the full height of the viewport */
+}
+
+main {
+    display: flex;
+    background-color: var(--main-background-color);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-large);
+    flex: 1;
+}
+
+article {
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
+    padding: var(--spacing-medium);
+    border: solid var(--main-container-border-color);
+}
+
+/* Typography */
+main h1, main h2, main h3, main h4, main h5 {
+    margin: var(--spacing-large) auto var(--spacing-medium) auto;
+    color: var(--main-text-color);
+    text-align: center;
+    max-width: var(--text-width);
+}
+
+main h1 {
+    font-size: var(--font-size-large);
+    margin-bottom: var(--spacing-large);
+    margin-top: var(--spacing-small);
+}
+
+main h2 {
+    font-size: var(--font-size-medium);
+    padding-bottom: var(--spacing-small);
+}
+
+main h3 {
+    margin-bottom: var(--spacing-large);
+}
+
+main p {
+    color: var(--main-text-color);
+    padding: var(--spacing-small) var(--spacing-medium);
+    max-width: var(--text-width);
+    width: 90%;
+    margin: 0 auto;
+}
+
+main li {
+    color: var(--main-text-color);
+}
+
+main a {
+    color: var(--main-link-text-color);
+    cursor: pointer;
+}
+
+/* Form Elements */
+main button {
+    display: flex;
+    font-size: var(--font-size-small);
+    cursor: pointer;
+    border: solid var(--main-button-border-color);
+}
+
+main label {
+    color: var(--main-text-color);
+    padding: var(--spacing-small);
+}
+
+main legend {
+    color: var(--main-container-border-color);
+}
+
+main option {
+    background-color: var(--light-gray);
+    color: var(--main-container-color);
+    padding: var(--spacing-small);
+    width: 60em;
+}
+
+/* Media Queries for Screen Sizes */
+
+/* Tablet styles */
+@media screen and (max-width: 60.5em) {
+    main {
+        padding: 1.5em;
+    }
+    
+    main h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5em;
+    }
+    
+    main h2 {
+        font-size: 1.8rem;
+        margin: 1.5em 0 1em 0;
+    }
+    
+    main h3 {
+        font-size: 1.2em;
+        margin-bottom: 1.5em;
+    }
+    
+    main p {
+        padding: 1.5em;
+        max-width: 70ch;
+        width: 95%;
+        font-size: 0.95em;
+    }
+    
+    article {
+        padding: 1em;
+    }
+    
+    main button {
+        font-size: 0.95em;
+        padding: 0.8em;
+    }
+    
+    main label {
+        padding: 0.8em;
+    }
+    
+    /* Table styles */
+    table {
+        max-width: 95%;
+        margin: var(--spacing-medium) auto;
+        font-size: 0.5em;
+    }
+    
+    th, td {
+        padding: 0.3em;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media screen and (max-width: 48em) {
+    
+    /* Reduce main padding on mobile */
+    body {
+        display: block;
+    }
+    
+    article {
+        padding: var(--spacing-small);
+    }
+    
+    main {
+        padding: var(--spacing-small);
+        grid-template-rows: auto 1fr auto;
+        min-height: 80vh;
+        flex: 1;
+    }
+
+    /* Make headings smaller on mobile */
+    main h1 {
+        font-size: var(--font-size-medium); /* Smaller than var(--font-size-large) */
+        margin-bottom: var(--spacing-small);
+    }
+    
+    main h2 {
+        font-size: 1.2em; /* Smaller than var(--font-size-medium) */
+        max-width: 100%; /* More flexible width */
+        margin-bottom: 2em;
+    }
+
+    main h3 {
+        font-size: .7em;
+        margin-bottom: var(--spacing-medium);
+    }
+
+    main p {
+        font-size: var(--font-size-small);
+        max-width: 75ch;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    main button {
+        font-size: var(--font-size-small);
+        display: block;
+    }
+
+    /* Form Elements */
+    main button {
+        display: flex;
+        font-size: var(--font-size-small);
+    }
+
+    main label {
+        padding: var(--spacing-small);
+    }
+
+    main legend {
+    }
+}
+
+/* Mobile table styles */
+@media screen and (max-width: 25em) {
+    table {
+        max-width: 95%;
+        margin: var(--spacing-small) auto;
+        font-size: 0.35em;
+    }
+    
+    th, td {
+        padding: 0.2em;
+    }
+}
+
